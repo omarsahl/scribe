@@ -30,8 +30,7 @@ abstract class _TaskStore with Store {
     _boardId = boardId;
   }
 
-  late final ObservableStream<KTask> taskStream =
-      ObservableStream(_repo.getTask(_taskId, _boardId).publishValue().autoConnect());
+  late final Stream<KTask> taskStream = _repo.getTask(_taskId, _boardId).publishValue().autoConnect();
 
   @computed
   bool get validInputs => nameState.isValid && contentState.isValid;

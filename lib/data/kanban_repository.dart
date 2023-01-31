@@ -106,4 +106,6 @@ class KRepository {
   }
 
   Future<bool> toggleTaskTimer(KTask task) async => _dataSource.toggleTaskTimer(task.id, task.boardId);
+
+  Future<List<KTask>> getAllBoardTasks(String boardId) => _dataSource.getBoardTasks(boardId);
 }

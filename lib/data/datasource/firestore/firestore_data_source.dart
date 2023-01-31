@@ -12,6 +12,7 @@ import 'package:kanban/exceptions/data_exception.dart';
 import 'package:kanban/exceptions/users_excpetion.dart';
 import 'package:kanban/utils/datetime/date_time_utils.dart';
 import 'package:kanban/utils/firebase/firestore_utils.dart';
+import 'package:kanban/utils/iterable_ext.dart';
 
 @Singleton(as: KDataSource)
 class FirestoreDataSource extends KDataSource {
@@ -102,6 +103,12 @@ class FirestoreDataSource extends KDataSource {
         .snapshots()
         .map((snapshots) => snapshots.docs)
         .map((docs) => docs.map((doc) => doc.data()).toList());
+  }
+
+  @override
+  Future<List<KTask>> getBoardTasks(String boardId) async {
+    final docs = await _tasks(boardId).get().then((snapshot) => snapshot.docs);
+    return docs.mapToList((e) => e.data());
   }
 
   @override

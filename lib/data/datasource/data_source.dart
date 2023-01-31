@@ -23,6 +23,8 @@ abstract class KDataSource {
 
   Stream<List<KBoard>> getUserBoards(String uid);
 
+  Future<List<KTask>> getBoardTasks(String boardId);
+
   FutureOr<void> updateBoard(String id, KBoardUpdateModel model);
 
   FutureOr<void> deleteBoard(String id);

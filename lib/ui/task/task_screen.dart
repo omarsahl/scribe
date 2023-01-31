@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:kanban/core/logger/logger.dart';
 import 'package:kanban/data/entity/task_entity.dart';
 import 'package:kanban/data/model/async/async_result.dart';
 import 'package:kanban/di/di_config.dart';
@@ -15,7 +14,6 @@ import 'package:kanban/ui/widgets/progress.dart';
 import 'package:kanban/ui/widgets/space.dart';
 import 'package:kanban/ui/widgets/textfield/text_field.dart';
 import 'package:kanban/utils/context_ext.dart';
-import 'package:kanban/utils/mobx_ext.dart';
 import 'package:kanban/utils/widget_ext.dart';
 import 'package:mobx/mobx.dart';
 import 'package:rxdart/rxdart.dart';
@@ -76,19 +74,20 @@ class _TaskScreenState extends State<TaskScreen> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      child: Observer(
-        builder: (context) {
-          final stream = _store.taskStream;
-          return stream.when(
-            onError: (_) => const ErrorView(),
-            onLoading: () => const DefaultProgressIndicator(centered: true),
-            onData: (task) {
-              logger.e(task);
-              return Scaffold(
-                appBar: _appBar(task),
-                body: _content(task),
-              );
-            },
+      // TODO(@omar): replace with observable.
+      child: StreamBuilder<KTask>(
+        stream: _store.taskStream,
+        builder: (context, snapshot) {
+          if (snapshot.hasError) {
+            return const ErrorView();
+          }
+          final task = snapshot.data;
+          if (task == null || snapshot.connectionState == ConnectionState.waiting) {
+            return const DefaultProgressIndicator(centered: true);
+          }
+          return Scaffold(
+            appBar: _appBar(task),
+            body: _content(task),
           );
         },
       ),
