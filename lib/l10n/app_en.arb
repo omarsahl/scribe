@@ -1,0 +1,123 @@
+{
+  "appName": "Scribe",
+  "helloMessage": "Hello!",
+  "welcomeToMessage": "Welcome to",
+  "getStarted": "Get Started",
+  "settings": "Settings",
+  "darkThemeSwitch": "Enable dark theme",
+  "logOut": "Log out",
+  "save": "Save",
+  "submit": "Submit",
+  "nameHint": "Name",
+  "emailHint": "Email",
+  "passwordHint": "Password",
+  "signInButtonText": "Sign In",
+  "signInLabel": "Please sign in to continue",
+  "createAccountButtonText": "Don't have an account? Create a new one",
+  "signUpButtonText": "Sign Up",
+  "signUpLabel": "Create a new Scribe account",
+  "signInInsteadLabel": "Already have an account? Sign in instead",
+  "socialSignInLabel": "Or continue with",
+  "signInWithGoogleButtonText": "Sign in with Google",
+  "emptyTextErrorMessage": "{fieldName} can't be empty",
+  "@emptyTextErrorMessage": {
+    "placeholders": {
+      "fieldName": {
+        "type": "String"
+      }
+    }
+  },
+  "blankTextErrorMessage": "{fieldName} can't be blank",
+  "@blankTextErrorMessage": {
+    "placeholders": {
+      "fieldName": {
+        "type": "String"
+      }
+    }
+  },
+  "invalidLengthTextErrorMessage": "{fieldName} must contain between {min} to {max} characters",
+  "@invalidLengthTextErrorMessage": {
+    "placeholders": {
+      "fieldName": {
+        "type": "String"
+      },
+      "min": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "invalidTextErrorMessage": "{fieldName} must be valid",
+  "@invalidTextErrorMessage": {
+    "placeholders": {
+      "fieldName": {
+        "type": "String"
+      }
+    }
+  },
+  "noBoardsMessage": "You haven't created any board yet\nTap the button below to create a new one",
+  "boardMembersCount": "{count, plural, =0{No members} =1{1 member} other{{count} members}}",
+  "@boardMembersCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "taskCompleteDate": "Completed at {date}",
+  "@taskCompleteDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "createBoardButtonText": "Create new board",
+  "newBoardDialogLabel": "New Board",
+  "newBoardDialogNameHint": "Board name",
+  "newBoardDialogDescriptionHint": "Description",
+  "newBoardDialogCreateButtonText": "Create",
+  "noGroupsMessage": "This board has no groups.\nTap the button below to create a new group",
+  "createGroupButtonText": "Add new group",
+  "newGroupDialogLabel": "New Group",
+  "updateGroupDialogLabel": "Update Group",
+  "newGroupDialogNameHint": "Group name",
+  "newGroupDialogColorLabel": "Color",
+  "createTaskButtonText": "Add new task",
+  "noTasksMessage": "This group has no tasks.\nTap the + button to add a new task",
+  "noCompletedTasksMessage": "No completed tasks",
+  "taskScreenTitle": "Task",
+  "taskNameDefault": "Untitled",
+  "taskNameHint": "Name",
+  "taskContentHint": "Tap to add content...",
+  "taskTimerLabel": "Task Timer",
+  "addLabel": "Add label",
+  "completeTask": "Complete task",
+  "moveTask": "Move task",
+  "taskMoveSuccess": "Task moved to selected group",
+  "taskMoveError": "Error moving task to a new group, try again",
+  "updatesSaved": "Updates saved successfully",
+  "taskCreated": "Task created",
+  "taskTimerStarted": "Task timer started",
+  "taskTimerStopped": "Task timer stopped",
+  "taskTimerStatusActive": "Timer is active",
+  "taskTimerStatusInactive": "Timer is paused",
+  "taskTotalTime": "Total time spent: {duration}",
+  "@taskTotalTime": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "taskTimerError": "Couldn't update timer, try again",
+  "completedTasks": "Completed tasks",
+  "authErrorInvalidEmail": "Invalid email",
+  "authErrorInvalidPassword": "Invalid password",
+  "authErrorAccountAlreadyExists": "The email address is already in use by another account",
+  "authErrorAccountNotFound": "No account found for the given credentials",
+  "authError": "Authentication error",
+  "genericErrorMessage": "Scribe has encountered an error, please try again."
+}

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "545327351488",
+    "project_id": "os-kanban",
+    "storage_bucket": "os-kanban.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545327351488:android:d0cbb8886f25bb5a344f25",
+        "android_client_info": {
+          "package_name": "com.omarsahl.kanban"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "545327351488-iuhhk7sppgejt5feagdp0nen4ai3plao.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7X0o88CRic1Gt3e03gRqWzpjMvdzD7WM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "545327351488-iuhhk7sppgejt5feagdp0nen4ai3plao.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "545327351488-em3c35somemi9ae0r9m5jdrmo3q41fee.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.omarsahl.kanban"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

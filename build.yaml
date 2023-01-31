@@ -1,0 +1,13 @@
+targets:
+  $default:
+    sources:
+      - $package$
+      - lib/$lib$
+      - lib/**.dart
+      - test/**.dart
+      - integration_test/**.dart
+
+global_options:
+  dart_mappable_builder:
+    options:
+      generateMethods: [ decode, encode ]

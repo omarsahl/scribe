@@ -1,16 +1,19 @@
 # kanban
 
-An implementation of the take-home challenge for Innoscripta's Flutter developer position.
+An implementation of the take-home challenge for innoscripta's Flutter developer position.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+After checking out the project's source code, you need to `cd` into the project's directory and run
+these commands:
 
-A few resources to get you started if this is your first Flutter project:
+```
+flutter pub get
+flutter gen-l10n
+flutter pub run build_runner build --delete-conflicting-outputs
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## TODO
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Add and remove members from boards.
+- Add labels for tasks.
