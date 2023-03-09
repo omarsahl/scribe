@@ -110,7 +110,7 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
           style: FilledButton.styleFrom(
             minimumSize: const Size.fromHeight(40),
           ),
-          child: Text(context.localizations.save),
+          child: Text(context.localizations.create),
         );
       },
     );

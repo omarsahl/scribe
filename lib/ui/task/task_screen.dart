@@ -220,7 +220,7 @@ class _TaskScreenState extends State<TaskScreen> {
   }
 
   void _save() {
-    _store.createTask(args.groupId, args.boardId);
+    _store.updateTask(args.taskId, args.boardId, false);
   }
 
   void _complete() {

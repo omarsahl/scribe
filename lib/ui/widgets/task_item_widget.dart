@@ -27,37 +27,40 @@ class TaskItem extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = context.theme;
     final localizations = context.localizations;
-    return Material(
-      elevation: 2,
-      type: MaterialType.card,
-      color: theme.colorScheme.surface,
-      borderRadius: Borders.roundedAll15,
-      surfaceTintColor: theme.colorScheme.primary,
-      child: InkWell(
-        onTap: onTap,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 2),
+      child: Material(
+        elevation: 1,
+        type: MaterialType.card,
+        color: theme.colorScheme.surface,
         borderRadius: Borders.roundedAll15,
-        child: Padding(
-          padding: const EdgeInsets.all(15),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              _title(theme),
-              Text(
-                formatTimestamp(task.createdAt),
-                style: theme.textTheme.bodySmall?.copyWith(
-                  fontWeight: FontWeight.w500,
-                  color: theme.colorScheme.onSurface.withOpacity(0.7),
+        surfaceTintColor: theme.colorScheme.primary,
+        child: InkWell(
+          onTap: onTap,
+          borderRadius: Borders.roundedAll15,
+          child: Padding(
+            padding: const EdgeInsets.all(15),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                _title(theme),
+                Text(
+                  formatTimestamp(task.createdAt),
+                  style: theme.textTheme.bodySmall?.copyWith(
+                    fontWeight: FontWeight.w500,
+                    color: theme.colorScheme.onSurface.withOpacity(0.7),
+                  ),
                 ),
-              ),
-              const VSpace(10),
-              Text(
-                task.content,
-                maxLines: 5,
-                overflow: TextOverflow.ellipsis,
-                style: theme.textTheme.bodyMedium,
-              ),
-              if (showFooter && isComplete) _buildFooter(theme, localizations),
-            ],
+                const VSpace(10),
+                Text(
+                  task.content,
+                  maxLines: 5,
+                  overflow: TextOverflow.ellipsis,
+                  style: theme.textTheme.bodyMedium,
+                ),
+                if (showFooter && isComplete) _buildFooter(theme, localizations),
+              ],
+            ),
           ),
         ),
       ),
